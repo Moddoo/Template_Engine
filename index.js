@@ -81,7 +81,7 @@ async function init() {
 
           output.push(x)
        
-         if (x.askAgain)  {return   na()};
+         if (x.askAgain)  return init();
     }
     catch (err){
        console.log(err)
