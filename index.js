@@ -32,6 +32,24 @@ let questions = [
       choices: ['Manager', 'Engineer', 'Intern']
   },
   {
+    type: 'input',
+    name: 'office',
+    message: "What's your Office number?",
+    when: ans => ans.title === 'Manager'
+  },
+  {
+    type: 'input',
+    name: 'github',
+    message: "What's your Github Username?",
+    when: ans => ans.title === 'Engineer'
+  },
+  {
+    type: 'input',
+    name: 'school',
+    message: "What's your School?",
+    when: ans => ans.title === 'Intern'
+  },
+  {
     type: 'confirm',
     name: 'askAgain',
     message: 'Want to enter another TEAM MEMBER??',
@@ -41,46 +59,8 @@ let questions = [
 
 async function init() {
     try{
-
-        const x = await inquirer.prompt(questions);
-
-          switch(x.title) {
-              case 'Manager': 
-             const a = await inquirer.prompt([
-                {
-                  type: 'input',
-                  name: 'office',
-                  message: "What's your office number?"
-                }
-            ])
-             x.office = a.office;
-             break;
-
-             case 'Engineer':
-             const b = await inquirer.prompt([
-                    {
-                      type: 'input',
-                      name: 'github',
-                      message: "What's your Github Username?"
-                    }
-                ])
-                 x.github = b.github;
-                 break;
-
-             case 'Intern':
-             const c = await inquirer.prompt([
-                {
-                  type: 'input',
-                  name: 'school',
-                  message: "What's your School?"
-                }
-            ])
-             x.school = c.school;
-             break;
-          }
-
-          output.push(x)
-       
+         const x = await inquirer.prompt(questions);
+         output.push(x)
          if (x.askAgain)  return init();
     }
     catch (err){
