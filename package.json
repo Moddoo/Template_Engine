@@ -21,9 +21,7 @@
   },
   "homepage": "https://github.com/Moddoo/Template_Engine#readme",
   "dependencies": {
-    "axios": "^0.19.2",
     "inquirer": "^7.0.6",
-    "inquirer-recursive": "0.0.6",
     "jest": "^25.1.0",
     "util": "^0.12.2"
   }
