@@ -41,5 +41,4 @@ MIT license
                 
 ## Question
 
-![github photo](${response.data.avatar_url})                  
-${ans.question}
+zoddoo@yahoo.com
