@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "test"
   },
   "scripts": {
     "test": "jest"
@@ -24,5 +25,6 @@
     "inquirer": "^7.0.6",
     "jest": "^25.1.0",
     "util": "^0.12.2"
-  }
+  },
+  "devDependencies": {}
 }
